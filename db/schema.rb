@@ -21,9 +21,11 @@ ActiveRecord::Schema.define(version: 2019_12_20_220021) do
   end
 
   create_table "songs", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "bpm"
     t.integer "speed"
     t.string "key"
+    t.integer "measures"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
